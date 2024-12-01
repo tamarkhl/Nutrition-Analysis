@@ -1,0 +1,143 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Center Content */
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 1em 0;
+  color: #555;
+}
+
+/* Form Styles */
+form {
+  max-width: 500px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd; /* Subtle border */
+  box-sizing: border-box; /* Ensures padding is included in the width/height */
+}
+
+/* Space inside the form container */
+form .form-group {
+  margin-bottom: 1.5em; /* Space between input fields */
+}
+
+/* Input and Textarea Styling */
+form input[type="text"],
+form textarea {
+  width: 100%; /* Full width within the form */
+  padding: 0.8em; /* Space inside the input fields */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+/* Space between the label and the input */
+form label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Textarea Specific Styling */
+form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  height: 100px; /* Default height */
+}
+
+/* Button Styling */
+form button {
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #4CAF50; /* Neutral green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Results Container Styles */
+.results-container {
+  max-width: 500px;
+  margin: 2em auto; /* Center on the page */
+  padding: 1.5em; /* Add space inside the box */
+  background: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #ddd; /* Border to match the form */
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+.results-container h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.results-container p {
+  margin: 0.5em 0; /* Space between paragraphs */
+  font-size: 1em;
+  color: #555;
+}
+
+.results-container ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.results-container li {
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.5; /* Improve readability */
+}
+
+/* Header Container */
+.header-container {
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Center horizontally */
+  gap: 1em; /* Space between the h1 and svg */
+  margin-bottom: 2em; /* Space below the header */
+}
+
+/* Header Title */
+.header-container h1 {
+  font-size: 2.5em;
+  color: #555;
+  margin: 0;
+}
+
+/* SVG Icon */
+.header-container .header-icon {
+  width: 40px; /* Adjust size as needed */
+  height: auto; /* Maintain aspect ratio */
+  cursor: pointer; /* Optional: indicate it's clickable */
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

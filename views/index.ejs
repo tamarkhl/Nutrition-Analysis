@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrition Analysis</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header-container">
+        <h1>Nutrition Analysis</h1>
+        <img src="/images/hamburger.svg" alt="Hamburger Menu" class="header-icon">
+      </div>
+    
+    <!-- Form Section -->
+    <form action="/analyze" method="POST">
+        <div class="form-group">
+          <label for="title">Recipe Title:</label>
+          <input type="text" id="title" name="title" placeholder="Enter recipe title" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="ingredients">Ingredients (one per line):</label>
+          <textarea id="ingredients" name="ingredients" placeholder="e.g., 100g chicken breast" required></textarea>
+        </div>
+      
+        <button type="submit">Analyze Recipe</button>
+      </form>
+
+    <!-- Error or Analysis Section -->
+    <div class="results-container flex">
+        <% if (error) { %>
+            <div class="results-container">
+              <p class="error">Error: <%= error %></p>
+            </div>
+          <% } %>
+          
+          <% if (analysis) { %>
+            <div class="results-container">
+              <h2>Nutrition Analysis</h2>
+              <p><strong>Calories:</strong> <%= analysis.calories %> kcal</p>
+              <ul>
+                <% if (analysis.totalNutrients) { %>
+                  <% Object.keys(analysis.totalNutrients).forEach(key => { %>
+                    <li>
+                      <%= analysis.totalNutrients[key].label %>: 
+                      <%= analysis.totalNutrients[key].quantity.toFixed(2) %> 
+                      <%= analysis.totalNutrients[key].unit %>
+                    </li>
+                  <% }); %>
+                <% } %>
+              </ul>
+            </div>
+          <% } %>
+    </div>
+  </div>
+</body>
+</html>
